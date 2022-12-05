@@ -28,18 +28,6 @@ defmodule DayTwo do
     |> Enum.sum()
   end
 
-  defp score_part_2("A X"), do: @loss + @z
-  defp score_part_2("B X"), do: @loss + @x
-  defp score_part_2("C X"), do: @loss + @y
-
-  defp score_part_2("A Y"), do: @draw + @x
-  defp score_part_2("B Y"), do: @draw + @y
-  defp score_part_2("C Y"), do: @draw + @z
-
-  defp score_part_2("A Z"), do: @win + @y
-  defp score_part_2("B Z"), do: @win + @z
-  defp score_part_2("C Z"), do: @win + @x
-
   defp score_part_1("A X"), do: @x + @draw
   defp score_part_1("B X"), do: @x + @loss
   defp score_part_1("C X"), do: @x + @win
@@ -51,6 +39,18 @@ defmodule DayTwo do
   defp score_part_1("A Z"), do: @z + @loss
   defp score_part_1("B Z"), do: @z + @win
   defp score_part_1("C Z"), do: @z + @draw
+
+  defp score_part_2("A X"), do: @loss + @z
+  defp score_part_2("B X"), do: @loss + @x
+  defp score_part_2("C X"), do: @loss + @y
+
+  defp score_part_2("A Y"), do: @draw + @x
+  defp score_part_2("B Y"), do: @draw + @y
+  defp score_part_2("C Y"), do: @draw + @z
+
+  defp score_part_2("A Z"), do: @win + @y
+  defp score_part_2("B Z"), do: @win + @z
+  defp score_part_2("C Z"), do: @win + @x
 
   def input do
     "lib/inputs/day_two"
